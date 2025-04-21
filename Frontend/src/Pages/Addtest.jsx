@@ -8,7 +8,7 @@ function Addtest() {
 
   const { updateWeb3State} = useWeb3context();
   const url1 = "http://localhost:3000/api";
-  const url = process.env.REACT_APP_API_BASE_URL;
+  
 
   const dispatch = useDispatch();
   const tests = useSelector((state) => state.cart.tests);
@@ -118,7 +118,8 @@ function Addtest() {
 
     try {
       // Send the data to the backend using axios
-      const response = await axios.post(`${url1}/api/ques`, testData);
+      const url = process.env.REACT_APP_API_BASE_URL;
+      const response = await axios.post(`${url}/api/ques`, testData);
       console.log('Backend Response:', response.data);
 
       alert('Test submitted successfully! Check the console for details.');

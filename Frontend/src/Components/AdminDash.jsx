@@ -14,6 +14,7 @@ function AdminDash() {
   const dispatch = useDispatch(); // Get dispatch function
   const url = process.env.REACT_APP_API_BASE_URL;
 
+
   useEffect(() => {
     const fetchExamCount = async () => {
       try {
@@ -32,6 +33,7 @@ function AdminDash() {
   }, []);
 
   useEffect(() => {
+
     const fetchExamCount1 = async () => {
       try {
         const response = await fetch(`${url}/api/test-count`);
