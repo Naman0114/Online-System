@@ -14,7 +14,7 @@ function Addtest() {
   const tests = useSelector((state) => state.cart.tests);
   // console.log(tests);
 
-  
+
   const [count, setCount] = useState(0);
   const [step, setStep] = useState(1);
   const [testTitle, setTestTitle] = useState('');
@@ -118,7 +118,7 @@ function Addtest() {
 
     try {
       // Send the data to the backend using axios
-      const response = await axios.post(`${url}/api/ques`, testData);
+      const response = await axios.post(`${url1}/api/ques`, testData);
       console.log('Backend Response:', response.data);
 
       alert('Test submitted successfully! Check the console for details.');
