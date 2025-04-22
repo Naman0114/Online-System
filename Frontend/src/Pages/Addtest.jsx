@@ -7,7 +7,7 @@ import { connectWallet } from "../utils/connectWallet";
 function Addtest() {
 
   const { updateWeb3State} = useWeb3context();
-  const url1 = "http://localhost:3000/api";
+  //const url1 = "http://localhost:3000/api";
   
 
   const dispatch = useDispatch();
@@ -143,10 +143,10 @@ function Addtest() {
     updateWeb3State({ contractInstance, selectedAccount });
 
 
-    const res = await axios.post(url1 + "/uploadFile");
+    const res = await axios.post(url + "/uploadFile");
     console.log(res.data);
 
-    const result = await axios.post(url1 + "/uploadPaper",{testData});
+    const result = await axios.post(url + "/uploadPaper",{testData});
     console.log(result.data.ipfsHash);
     console.log(testData.title);
 
