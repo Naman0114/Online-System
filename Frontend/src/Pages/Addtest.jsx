@@ -144,10 +144,10 @@ function Addtest() {
     updateWeb3State({ contractInstance, selectedAccount });
 
 
-    const res = await axios.post(url + "/uploadFile");
+    const res = await axios.post(url + "/api/uploadFile");
     console.log(res.data);
 
-    const result = await axios.post(url + "/uploadPaper",{testData});
+    const result = await axios.post(url + "/api/uploadPaper",{testData});
     console.log(result.data.ipfsHash);
     console.log(testData.title);
 
